@@ -1,0 +1,1154 @@
+/* Import Bad Script and Alumni Sans SK fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+}
+
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes up the full height */
+    background-color: #ADCCBC; /* Main background color for sections */
+    overflow-x: hidden;
+    color: #fff; /* Default text color */
+    font-size: 1.2em; /* Use relative units for font size */
+
+}
+
+/* Section Styles */
+section {
+    padding: 0px 0px; /* Add padding */
+    width: 100vw; /* Full width of the viewport */
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header { 
+    position: relative; /* Set the header to relative positioning */
+    background: linear-gradient(rgba(173, 204, 188, 0.4), rgba(173, 204, 188, 0.5)), url('../assets/hbackground.png');
+    background-position: center bottom; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure no tiling */
+    background-size: cover; 
+    width: 100%; 
+    height: 100vh; 
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Align content to the center */
+    align-items: center; /* Center content vertically */
+    overflow-x: hidden;
+}
+
+/* Hero Content Styles */
+.hero-content {
+    background-size: cover; /* Change to contain to maintain aspect ratio */
+    position: relative; /* Position relative for layering */
+    z-index: 2; /* Ensure it appears above the background */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+/* Hero Content Styles */
+.first-half {
+    line-height: 1; /* Decrease line height */
+    margin-bottom: -50px !important; /* Pull it closer */    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 3rem; /* Increase font size for better visibility */
+    font-weight: bold; /* Make the font bold */
+    color: #ff3737; /* White color for contrast */
+    text-shadow: 
+    1px 1px 0px black,   /* Right shadow for outline */
+    -1px -1px 0px black, /* Left shadow for outline */
+    1px -1px 0px black,  /* Top right shadow for outline */
+    -1px 1px 0px black,  /* Bottom left shadow for outline */
+    0px 0px 1px rgba(255, 255, 255, 0.4), /* Frosty shadow effect */
+    0px 0px 2px rgba(173, 204, 188, 0.2); /* Frosty shadow effect */
+    letter-spacing: 5px; /* Increase letter spacing for a more airy feel */
+    animation: shimmer 1.5s infinite; /* Add shimmer animation */
+    overflow-x: hidden;
+}
+
+.second-half {
+    line-height: 1; /* Decrease line height */
+    margin-top: -50px !important; /* Pull it closer */    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 3rem; /* Increase font size for better visibility */
+    font-weight: bold; /* Make the font bold */
+    color: #fff; /* White color for contrast */
+    text-shadow: 
+    1px 1px 0px black,   /* Right shadow for outline */
+    -1px -1px 0px black, /* Left shadow for outline */
+    1px -1px 0px black,  /* Top right shadow for outline */
+    -1px 1px 0px black,  /* Bottom left shadow for outline */
+    0px 0px 1px rgba(255, 255, 255, 0.9), /* Frosty shadow effect */
+    0px 0px 2px rgba(173, 204, 188, 1); /* Frosty shadow effect */
+    letter-spacing: 5px; /* Increase letter spacing for a more airy feel */
+    animation: shimmer 1.5s infinite; /* Add shimmer animation */
+    overflow-x: hidden;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+    0% {
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 20px rgba(173, 204, 188, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 30px rgba(173, 204, 188, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 20px rgba(173, 204, 188, 0.5);
+    }
+}
+
+.hero-content .uk-panel {
+    position: absolute; /* Position the button absolutely */
+    bottom: 50%; /* Move it 50px from the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+}
+
+@media (max-width: 768px) {
+    header {
+        overflow-x: hidden;
+        padding: 20px 0; /* Less padding on smaller screens */
+    }
+
+    .first-half {
+        line-height: 1; /* Decrease line height */
+        padding: 0;
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        letter-spacing: 1px; /* Adjust letter spacing for mobile */
+        text-align: center; /* Center text for mobile view */
+        overflow-x: hidden;
+    }
+
+    .second-half {
+        line-height: 1; /* Decrease line height */
+        padding: 0;
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        letter-spacing: 1px; /* Adjust letter spacing for mobile */
+        text-align: center; /* Center text for mobile view */
+        overflow-x: hidden;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        overflow-x: hidden;
+        font-size: 1.3rem; /* Further reduce font size for smaller screens */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Adjust button container */
+.uk-panel {
+    display: block; /* Ensure the panel is a block element */
+    justify-items: end;
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Add some space above the button */
+}
+
+/* Cleaned up and organized CSS for UK button */
+ .uk-button {
+    margin: 0;
+    min-width: 250px; /* Increase minimum width */
+    padding: 10px 40px; /* Increase padding for larger size */
+    display: block;
+    overflow: visible; /* IE9 & 10 */
+    position: relative;
+    z-index: 2;
+    font-size: 24px; /* Increase font size for better visibility */
+    font-weight: bold; /* Make font bold for emphasis */
+    color: #fff; /* Text color */
+    box-sizing: border-box;
+    background: radial-gradient(ellipse at center, #d35448 0%, #4a110c 100%);
+    line-height: 1.5; /* Adjust line-height for better vertical alignment */
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 30px; /* Adjust border radius if needed */
+    transition: background-color 0.3s ease-out, transform 0.2s ease-out, opacity 0.3s ease-out, border-color 0.3s ease-out; font-family: 'Pacifico', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add subtle text shadow for depth */
+}
+
+.uk-button-large {
+    min-height: 44px;
+    padding: 0 24px;
+    line-height: 44px;
+    font-size: 13px;
+    border-radius: 501px;
+}
+ 
+.uk-button:hover {
+    background-color: #8CBE4A; /* Darker shade for hover */
+    color: #fff; /* Keep text color white on hover */
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+  .uk-button::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -7px;
+      left: -3px;
+      right: 0;
+      height: 23px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAXCAYAAACS5bYWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABFpJREFUeNrUV0tIo1cUvpkYjQ4xxSA6DxuNqG0dtaUKOgs3s6i0dFd3pSsXdjeIixakiGA34sZuXCkoONLFwJTK4GMYLYXg29gatTpiXurkbd7vv9/5ub+IxuhA7eiFQ5Kbc8/57ne/e87/ywRBYLdl3GG3aNwqsLJ0k0tLS+fmcnNzWUVFBVMoFGx2djarvLxcm5OTw+bm5iytra2xc4ExNjY27iqVyvvwK6CpeDzuCYVC1urq6qDA9UcfPp+PHR4esmAwKK6tr68/l5/8rgQ2Ozub1dbWyiYmJooaGxt/VqvV38jlchX9l0qlwoFA4DWS/RKLxRxFRUVf5+XlPcaaT2AP0sVPJBL2SCRiAPBpu93+vKamZo/Ae71eZjabWV1dXVqw7CKwp43ksrCw8Bhg7MJ/PLDZ5PHx8cz29vYT5JGD/bSYLgTrcDgYdk6siSc6NjZWDaAe4ZoHQL+cmZnRpZPnhWDpD8kw7uKo9ML/NMCsd2tr61vkzboMrEyv138M7TyLRqMWMBsX3sMgaZhMpp+AR5EJrCocDpuEGzKg4x8khs+CVWxubvZfR9JkMik4nU7BarUKLpeLmLsKuwIqTLynp4fqmIzASrqQT09Pf1VVVfX0KsWZ6uHBwQHTaDSsoKAgo6/H4xHLEcrVyRwuEisrKzs5XrrIVAVwiUVDKRRrL+YI32ewdVhMApuHWvcj6vids6J2u90MF4yBHUZNgKoEBaRBQalJqFSqtJfUYrGIlQX+ydXVVTN+u0tKSjQNDQ1axJVl2iTypebn55d7e3v/kqoDgZU1NTU9LCws/Py0M+2ekuGincxJ3yF+18jIyHJLS0slQJUWFxczrBeBE0vE5tHRkbixlZWVfSR8gTX/0P5gH7S1tX3Z3t7+BW8qAvwSfr8/jA0EIRM/qoFtampqbW9vTw+XA+ojUruVd3Z2tvb19T2TQFEim81GgVJoCvvj4+NLOJZgaWmpemdn5y3a6BbcnJDAw8HBwac6ne6eqCW5XDwB3qVSqM9/DAwMUNy/eVLabT7sI25qwgujThCBhWE+mAt2yNc4SQKSZrOQQE1HS22VJkmPAGTr7+//fX19fRk+Zgq0trbGeFAKEAQT98BSqKOj47vm5uaa/Px8JeIk4GcaHh6eWlxcfAU/A8xG67BxAX3fwdcbYUpSDJ06Z49Ak8ZC3OL8f3YiA4PBYKdLQ2AJ9OTk5GpXV9cQiCVh79M94QtlPLDUE/1gPNrd3f0W33W4cBoco48zQuy/IZYAMnGqlSc4c66L9JruQUaSARXeT8HGKzxAqFBekni6+h46+pMzGiJGMgTOJh1yU/KNEGDvZWvfBawkA9ppwGg0mrRa7SOI2g+gxOgbJIpdFpj72PnxSnPX8vqRxTURgBQWKisrH+GThOm+CtAzoK/9/Uiqq/6hoaHfdnd3jaOjo7/yY7yxbwqkWy3sQzpS2C6YirwvUJk0y7hurfyGRrnduPGvAAMASmo8wzeVwfsAAAAASUVORK5CYII=) no-repeat 0 0,
+    url(data:image/png;base64,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) no-repeat 50% 0,
+	url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAXCAYAAACFxybfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAodJREFUeNrsVb1rWlEUv2pN/GqspKRSKFYXWzEloIWif0Fn6dJChQ7OQil0qd3EzcEpg0OgdHDr4CQODk7VRlLMEIVqApX4We0zflR9/Z1Ui4T34ksaaAYP/Hzc673n/M6550PG8zz73yKjn0wm83fDYDAwo9HINBrNnwOQg4MDs0ql2lQqlfdAWont7ng8Pjw+Ps44nc4G1pI9EXWaSOzt7TGO42aH5Pv7+08ajUZ0MBiUeXEZd7vdL5VK5fX29rZ+5tQiEmdxKrlcjsEYczgcynK5/BKKv/IXFNz/XiqVXkHdjUuRIA9SqdRD8or/R8Ez9fr9fqHVakUR4c2z0REjIQuHw2ZcrPBXLCA0RHTezEdHjIQqkUhEr9I4HOILhQLf6/VoOUFEvDMiQiToDx1Cdz+bzZ6bUFarlel0OkkVUK/XWbvdPoVer5fh3ntsfwJ+CJ2XA4p0Op1bpBgJyxDehQQ6nQ5DZXHBYDBZq9V+EhFUndnr9drEqoc2bwJbwGPgtohuVSwWe2Gz2TZMJpNgRKi6qtUqg2EWj8dTgUDgo0KhWPN4PC70EvXOzs67fD6/S6kiRIKeZA1YJ2MiJNbdbvfTUCjkV6vVK2hcDF8GI2w0GrGTkxM2HA5PDxaLxSOfz/cWEfk81X0XIMMFgJJ/srBjCgk8IdcfuVyuZ36//7nFYtkQyAMumUzuRiKRD0jMFLa+AZOpYwqgB/ziBVqmVBKUO7eAB/R0WG/Z7XaTVqtdbTabHJL6EK2djBaBPHA0NSqpbUsiMUeEBgpF4Q5AbZrmSJ/yEWgBTaBNHl9kdkgmMUeG7qwAq9PqovceTA3zlxlgsuswyuXsGsiSxJLEkoSY/BZgAEjRodi+uBruAAAAAElFTkSuQmCC) no-repeat 100% 0;
+}
+
+/* Cap Section Styles */
+.cap {
+    background-color: rgba(255, 255, 255, 0.25); /* White with 75% transparency */ 
+    padding: 20px;
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Cap Content Styles */
+.cap-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Stack children horizontally */
+    justify-content: space-between; /* Space between buttons and icons */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Ensure it takes the full width */
+}
+
+/* Cap Image Styles */
+.cap-images {
+    position: absolute; /* Set to absolute positioning */
+    left: 47.5%; /* Position from the left */
+    transform: translateX(-40%); /* Center the images horizontally */
+    display: flex; /* Use flexbox for images */
+    align-items: center; /* Center images vertically */
+    justify-content: center; /* Center images within this container */
+    flex-grow: 1; /* Allow this section to take up available space */
+    margin: 0; /* Margin to prevent touching edges */
+}
+
+.cap-image {
+    margin: 0 2px; /* Set horizontal margin for spacing between images */
+    max-height: 50px; /* Set a maximum height for the images */
+}
+
+/* Cap Buttons Styles */
+.cap-buttons {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Stack children horizontally */
+}
+
+.cap-buttons button,
+.cap-buttons .buy-button {
+    background-color: #BED04A; /* New background color */
+    color: white; /* Change text color to white */
+    border: 2px solid #BED04A; /* Match border color with background */
+    border-radius: 50px; /* Rounded corners */
+    padding: 8px 16px; /* Reduced padding for lower height */
+    font-size: 18px; /* Font size */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition for hover effects */
+    font-family: 'Snowburst', cursive;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 0 10px; /* Add horizontal margin to create spacing */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Specific style for the buy button to ensure no underline */
+.cap-buttons .buy-button {
+    text-decoration: none; /* Remove underline */
+    font-family: 'Snowburst', cursive;}
+
+/* Hover state */
+.cap-buttons button:hover,
+.cap-buttons .buy-button:hover {
+    background-color: #8CBE4A; /* Darker shade for hover */
+    color: #fff; /* Keep text color white on hover */
+    transform: scale(1.05) rotate(3deg); /* Scale and rotate for animation */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Active state */
+.cap-buttons button:active,
+.cap-buttons .buy-button:active {
+    background-color: #A1C657; /* Slightly darker color on press */
+    transform: translateY(2px); /* Scale down on press */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.contact-button-box {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the buttons horizontally */
+    box-sizing: border-box;
+    align-items: center; /* Center the buttons vertically */
+}
+
+.contact-button {
+    font-family: 'Snowburst', cursive;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content inside the link */
+    width: 50px; /* Full width for buttons */
+    height: 50px;
+    margin: 0 10px; /* Space between buttons */
+    font-size: 16px; /* Ensure font size is readable */
+    background-color: #BED04A; /* Match background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    overflow: hidden; /* Prevent overflow of the image */
+    position: relative; /* Set position to relative for absolute positioning of the image */
+
+}
+
+.contact-button:hover {
+    background-color: #8CBE4A; /* Darker shade on hover */
+}
+
+/* Social Button Styles */
+.social-button-a img,
+.social-button-b img,
+.phone-button img {
+    width: 40px; /* Set icon size */
+    height: 40px; /* Set icon size */
+}
+
+.social-button-a {
+    border-radius: 50%; /* Rounded corners */
+    padding: 10px 5px 10px 0;
+}
+
+.social-button-b {
+    border-radius: 50%; /* Rounded corners */
+    padding-right: 8px;
+    margin: 0;
+}
+
+.phone-button {
+    margin: 0 10px; /* Space between buttons */
+    padding: 10px 20px; /* Increased padding for better touch targets */
+    background-color: #BED04A; /* Green background to match cap buttons */
+    border: 2px solid #BED04A; /* Match border color with background */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensure the content doesn't overflow */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-width: 220px; /* Set a minimum width to ensure text fits */
+}
+
+.contact-button a {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline from links */
+    width: 100%; /* Make the link take the full width of the button */
+    justify-content: center; /* Center the content inside the link */
+}
+
+.contact-icon-image {
+    padding-right: 5px;
+    width: 100%; /* Set width to 100% to fill the button */
+    height: 100%; /* Set height to 100% to fill the button */
+    max-width: 40px; /* Set a maximum width to prevent overflow */
+    max-height: 40px; /* Set a maximum height to prevent overflow */
+    display: block; /* Ensure the image is treated as a block element */
+    object-fit: contain; /* Ensure the image scales correctly without distortion */
+    margin: auto; /* Center the image within the button */
+}
+
+.contact-text {
+    margin-left: 5px; /* Space between icon and text */
+    color: #fff; /* Text color */
+    line-height: 50px; /* Match the height of the phone icon */
+    height: 50px; /* Set height to match the icon */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center text vertically */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.contact-icons {
+    display: flex; /* Use flexbox for icons */
+    align-items: center; /* Center icons vertically */
+    }
+
+.contact-icons a {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-icons span {
+    margin-left: 5px; /* Space between icon and text */
+    color: #fff; /* Text color */
+    line-height: 50px; /* Match the height of the phone icon */
+    height: 50px; /* Set height to match the icon */
+    display: flex; /* Use flexbox for centering */
+    align-items: flex-start; /* Center text vertically */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.contact-icon {
+    margin-left: 12.5px; /* Space between icons */
+    max-height: 40px; /* Set a maximum height for the icons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Mobile Dropdown Menu Styles */
+.mobile-menu {
+    display: none; /* Hide by default */
+    flex-direction: column; /* Stack items vertically */
+    background-color: transparent; /* Remove white background */
+    position: absolute; /* Position it absolutely */
+    top: 50px; /* Position below the cap */
+    left: 0;
+    right: 0;
+    z-index: 1001; /* Ensure it appears above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 10px 0; /* Add some padding */
+}
+
+/* Mobile Menu Button */
+.menu-button {
+    font-family: 'Snowburst', cursive;
+    display: none; /* Hide by default */
+    background-color: #BED04A; /* Background color for menu button */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 5px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover state for menu button */
+.menu-button:hover {
+    background-color: #8CBE4A; /* Darker shade on hover */
+}
+
+/* Style for buttons in the mobile menu */
+.mobile-menu button, 
+.mobile-menu .buy-button, 
+.mobile-menu .contact-button { 
+    font-family: 'Snowburst', cursive;
+    display: block; /* Ensure all buttons are displayed in the mobile menu */ 
+    width: 100%; /* Full width for buttons */ 
+    margin: 5px 0; /* Space between buttons */ 
+    padding: 10px; /* Add padding for better touch targets */ 
+    font-size: 20px; /* Ensure font size is readable */ 
+    line-height: 100%;
+    text-align: center; /* Center text in buttons */ 
+    background-color: #BED04A; /* Match background color */ 
+    color: white; /* Text color */ 
+    border-radius: 50px; /* Rounded corners */ 
+    cursor: pointer; /* Pointer cursor on hover */ 
+    transition: background-color 0.3s ease; /* Transition for hover effect */ 
+} 
+
+.mobile-menu .contact-button {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Center content inside the link */
+    width: 100%; /* Full width for buttons */
+    margin: 5px 0; /* Space between buttons */
+    padding: 10px; /* Add padding for better touch targets */
+    background-color: #BED04A; /* Match background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.mobile-menu .contact-button a {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content inside the link */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Ensure text color is white */
+    width: 100%; /* Make the link take the full width of the button */
+}
+
+/* Mobile Menu Phone Button Styles */
+.mobile-menu .contact-button.phone-button {
+    font-size: 16px; /* Ensure font size is readable */ 
+    padding: 5px 10px; /* Reduce padding for a shorter button */
+}
+/* Hover state for mobile buttons */
+.mobile-menu button:hover,
+.mobile-menu .buy-button:hover {
+    background-color: #8CBE4A; /* Darker shade for hover */
+}
+
+/* Media Queries for Mobile Adaptation */
+@media (max-width: 768px) {
+/* Cap Content Styles */
+.cap-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Stack children horizontally */
+    justify-content: flex-start; /* Align items to the start for mobile */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Ensure it takes the full width */
+
+    .cap-images {
+        display: flex; /* Use flexbox for images */
+        transform: translateX(-42.5%);
+        align-items: center; /* Center images vertically */
+        justify-content: center; /* Center images within this container */
+        flex-grow: 1; /* Allow this section to take up available space */
+    }
+
+    .cap-image {
+        max-height: 30px; /* Set a smaller maximum height for mobile */
+        margin: 0 2px; /* Set horizontal margin for spacing between images */
+    }
+
+    .cap {
+        padding-top: 10px; /* Adjust padding to prevent overlap with the menu button */
+    }
+}
+
+    .cap-buttons {
+        display: none; /* Hide original buttons on mobile */
+    }
+
+    .contact-button-box {
+        display: none; /* Hide desktop contact buttons */
+    }
+
+    .mobile-menu {
+        display: none; /* Show mobile menu */ 
+        margin: 25px 0;
+        flex-direction: column; /* Stack items vertically */
+        background: none; /* Slightly opaque background */
+        padding: 10px; /* Padding for mobile menu */
+        position: absolute; /* Positioning for dropdown */
+        top: 50px; /* Adjust based on your layout */
+        left: 0;
+        right: 0;
+        z-index: 1001; /* Above other content */
+    }
+
+    .menu-button {
+        background-color: #BED04A; /* Green background to match cap buttons */
+        border: 2px solid #BED04A; /* Match border color with background */
+        transition: transform 0.2s, background-color 0.3s ease; /* Smooth transition for hover effect */
+        display: block; /* Show the menu button on mobile */
+    }
+
+    /* Show mobile menu when the menu button is active */
+    .menu-button.active + .mobile-menu { 
+        display: flex; /* Show mobile menu when active */ 
+ } 
+ 
+    .mobile-menu button, 
+    .mobile-menu .buy-button, 
+    .mobile-menu .contact-button { 
+        display: block; /* Ensure all buttons are displayed in the mobile menu */ 
+        width: 45%; /* Full width for buttons */ 
+        margin: 5px; /* Space between buttons */ 
+        background-color: rgba(190, 208, 74, 1); /* Green background to match cap buttons */
+        border: 2px solid #BED04A; /* Match border color with background */
+        transition: transform 0.2s, background-color 0.3s ease; /* Smooth transition for hover effect */
+        border-radius: 50px; /* Rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        color: white; /* Text color */
+        padding: 10px; /* Padding for the button */
+        cursor: pointer; /* Pointer cursor on hover */
+        position: relative; /* Position relative for pseudo-elements */
+        overflow: hidden; /* Prevent overflow */
+    } 
+
+    .mobile-menu .contact-icon-image {
+        position: relative;
+        margin: 0;
+        align-items: flex-start;
+        justify-content: left;
+        padding-bottom: 5px;
+        display: block;
+    }
+
+    .mobile-menu .contact-button {
+        justify-content: flex-start;
+        padding-bottom: 5px;
+        text-align: start;
+        align-items: flex-start;
+    }
+
+    .contact-icon {
+        max-height: 40px; /* Set a maximum height for the icons */
+        padding: 2px 0;
+        margin: 0;
+        flex-grow: none;
+        left: 0; /* Position from the left */
+    display: flex; /* Use flexbox for images */
+    align-items: flex-start; /* Center images vertically */
+    justify-content: flex-start; /* Center images within this container */
+    }
+    
+    .contact-text {
+        margin-left: 5px; /* Space between icon and text */
+        color: #fff; /* Text color */
+        line-height: 50px; /* Match the height of the phone icon */
+        height: 50px; /* Set height to match the icon */
+        display: flex; /* Use flexbox for centering */
+        align-items: flex-start; /* Center text vertically */
+        white-space: nowrap; /* Prevent text wrapping */
+        text-align: start; /* Center text */
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none; /* Hide mobile menu */
+    }
+}
+
+/* Additional Information Section */
+.additional-info {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Ensure this is set to relative for absolute positioning of children */
+    max-width: 100%; /* Full width */
+    min-height: 1080px;
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Add padding for spacing */
+    background: linear-gradient(rgba(173, 204, 188, 0.4), rgba(173, 204, 188, 0.5)), url('../assets/abackground.png'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    overflow-x: hidden; /* Hide overflow to prevent stretching */
+}
+
+.additional-info-header {
+    position: absolute;
+    flex-wrap: nowrap;
+    top: 0; /* Adjust this value to position it at the top */
+    left: 47.5%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center the text */
+    z-index: 100;
+    font-family: 'Pacifico', cursive; /* Set font to Alumni Sans SK */
+    font-size: 2.9rem; /* Adjust font size as needed */
+    font-weight: 1000;
+    letter-spacing: 5px;
+    color: #fff; /* Set text color to white for contrast */
+    text-align: center; /* Center the text */
+    margin: 50px; /* Remove default margin to position at the top */
+    padding-top: 0; /* Add some padding at the top for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better visibility */
+}
+
+/* Cloud Styles */
+.cloud { 
+    position: absolute; /* Positioning for clouds */ 
+    max-width: 100%; /* Ensure images do not exceed their container */
+    height: auto; /* Height of the cloud images */ 
+    background-size: contain; /* Cover background */ 
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    z-index: 30; /* Set a higher z-index for clouds */ 
+    opacity: 1; /* Make clouds fully visible */
+    margin: 10px 0; /* Add margin for spacing between clouds */
+}
+
+.cloud1 { 
+    width: 465px; /* 310px * 1.5 */
+    height: 337.5px; /* 225px * 1.5 */
+    top: 20px; /* Position at the top with space */
+    left: 20px; /* Position at the left with space */
+    background-image: url('../assets/cloud1.png'); /* Path to your cloud image */
+}
+
+.cloud2 { 
+    width: 391.5px; /* 261px * 1.5 */
+    height: 340.5px; /* 227px * 1.5 */
+    top: 20px; /* Position at the top with space */
+    right: 20px; /* Position at the right with space */
+    background-image: url('../assets/cloud2.png'); /* Path to your cloud image */
+}
+
+.cloud3 { 
+    width: 435px; /* 290px * 1.5 */
+    height: 357px; /* 238px * 1.5 */
+    bottom: 50px; /* Position at the bottom with space */
+    left: 50px; /* Position at the left with space */
+    background-image: url('../assets/cloud3.png'); /* Path to your cloud image */
+}
+
+.cloud4 { 
+    width: 457.5px; /* 305px * 1.5 */
+    height: 394.5px; /* 263px * 1.5 */
+    bottom: 50px; /* Position at the bottom with space */
+    right: 50px; /* Position at the right with space */
+    background-image: url('../assets/cloud4.png'); /* Path to your cloud image */
+}
+
+.snake {
+    position: absolute; /* Ensure it is positioned absolutely */
+    width: 400px; /* Set a fixed width for the cloud */
+    height: 600px; /* Height will adjust based on the image */
+    top: 45%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the cloud */
+    background-image: url('../assets/cloud5.png'); /* Path to your new cloud image */
+    background-size: contain; /* Ensure the background image fits */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    z-index: 30; /* Ensure it is above other elements */
+    opacity: 1; /* Make the cloud fully visible */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .additional-info {
+        min-height: 768px; /* Adjust minimum height for smaller screens */
+        width: 100%;
+        margin: 0;
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: wrap;
+        flex-direction: column; /* Stack clouds vertically */
+        align-items: center; /* Center clouds horizontally */
+        position: relative; /* Ensure relative positioning for stacking */
+        padding: 10px; /* Adjust padding for smaller screens */overflow-x: hidden;
+}
+
+.additional-info-header {
+    position: absolute;
+    flex-wrap: nowrap;
+    top: 0; /* Adjust this value to position it at the top */
+    transform: translateX(-50%); /* Center the text */
+    z-index: 100;
+    font-size: 2rem; /* Adjust font size as needed */
+    font-weight: 1000;
+    color: #fff; /* Set text color to white for contrast */
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove default margin to position at the top */
+    padding-top: 20px; /* Add some padding at the top for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better visibility */
+
+}
+    .cloud {
+        position: relative; /* Change to relative positioning for stacking */
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10px 0; /* Add margin for spacing between clouds */
+        width: 100%; /* Set a width for mobile view */
+        height: 200px; /* Maintain aspect ratio */
+        background-size: contain; /* Ensure the background image fits */
+        background-repeat: no-repeat; /* Prevent the background from repeating */
+
+    }
+
+    .cloud1, .cloud2, .cloud3, .cloud4, .snake {
+        /* You can add specific styles for each cloud if needed */
+        max-width: 100%; /* Ensure images do not exceed their container */
+        margin: 10px;
+        background-size: contain; /* Ensure the background image fits */
+        background-repeat: no-repeat; /* Prevent the background from repeating */
+    }
+
+    .cloud1 {
+        top: 120px;
+        left: 40px;
+    }
+
+    .cloud2 {
+        top: 100px;
+        left: 45px;
+    }
+
+    .snake {
+        top: 125px;
+        left: 275px;
+        align-self: center;
+    }
+
+    .cloud3 {
+        bottom: 5px;
+        left: 45px;
+    }
+
+    .cloud4 {
+        margin-top: 50px;
+        left: 45px;
+    }
+}
+
+/* Shop Section Styling */
+.shop {
+    background: linear-gradient(rgba(173, 204, 188, 0.5), rgba(173, 204, 188, 0.5));
+    background-image: url('../assets/sbackground.png'); /* Ensure this line is included */
+    background-size: cover; /* Use 'cover' to ensure the image covers the section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 10px 20px; /* Padding for spacing */
+    text-align: center; /* Center text */
+    width: 100%; /* Set width greater than 100vw to allow for overflow */
+    height: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Shop Section Header */
+.shop-header {
+    display: none; /* Hide by default */
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text */
+    padding-top: 0;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    gap: 10px; /* Space between product items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    overflow: hidden;
+}
+
+.product-item {
+    background-color: #ffffff; /* White background for product items */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 30px; /* Padding for product items */
+    margin: 0 15px;
+    text-align: center; /* Center text */
+    max-width: 45%; /* Fixed width for product items */
+    height: auto;
+    position: relative; /* For positioning effects */
+    overflow: hidden; /* Hide overflow for image effects */
+}
+
+.product-item img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Buy Now Button Styling */
+.buy-now-button {
+    background-color: #BED04A; /* Match the cap button background color */
+    color: white; /* Text color */
+    border: 2px solid #BED04A; /* Match border color with background */
+    border-radius: 50px; /* Rounded corners */
+    margin-top: 10px;
+    padding: 8px 30px 16px 30px; /* Padding for lower height */
+    font-family: 'Pacifico', cursive; /* Use the same font as other headers */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Transition for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover state for Buy Now Button */
+.buy-now-button:hover {
+    background-color: #8CBE4A; /* Darker shade for hover */
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Active state for Buy Now Button */
+.buy-now-button:active {
+    background-color: #A1C657; /* Slightly darker color on press */
+    transform: translateY(2px); /* Scale down on press */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    align-self: center;
+    z-index: 1000; /* Sit on top */
+    top: 0;
+    max-width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
+}
+
+/* Modal Header Styles */
+.modal-header {
+    font-family: 'Pacifico', cursive; /* Use the same font as other headers */
+    font-size: 2rem; /* Adjust font size as needed */
+    font-weight: 1000; /* Match the font weight */
+    color: #000000; /* Set text color to white for contrast */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add margin for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #888; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 75%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    overflow: hidden;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styles */
+form {
+    max-width: 100%;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="tel"],
+textarea {
+    max-width: 100%; /* Full width */
+    padding: 10px; /* Padding for input fields */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #8CBE4A; /* Green border on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Submit Button */
+button[type="submit"] {
+    max-width: 100%;
+    background-color: #BED04A; /* Default background color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 10px;
+    padding: 10px; /* Padding */
+    font-family: 'Pacifico', cursive;
+    font-size: 20px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button[type="submit"]:hover {
+    background-color: #8CBE4A; /* Darker shade on hover */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .shop {
+        background-color: (rgba(173, 204, 188, 0.4), rgba(173, 204, 188, 0.5));        
+        background-image: url('../assets/fbackground.jpg'); /* New background for mobile */
+        background-size: cover; /* Cover the entire section */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        padding: 30px 10px; /* Adjust padding for mobile */
+        max-width: 100%; /* Full width for mobile */
+        margin-left: 0; /* Reset margin for mobile */
+        overflow-x: hidden;
+    }
+
+    .shop-header {
+        max-width: 100%;
+        font-family: 'Pacifico', cursive;
+        font-size: 2rem;
+        margin-top: 10px;
+        display: block; /* Show the header in mobile view */
+    }
+
+    .products{
+        margin-top: 10px; /* Adjust margin for mobile */   
+    }
+
+    .product-item {
+        max-width: 100%; /* Ensure product items take full width */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .product-item img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .modal-content {
+        margin: 5% auto; /* Less margin on mobile */
+        padding: 15px; /* Less padding on mobile */
+        overflow: hidden;
+    }
+
+    .close {
+        font-size: 24px; /* Smaller close button on mobile */
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    textarea {
+        font-size: 14px; /* Smaller font size on mobile */
+    }
+
+    button[type="submit"] {
+        font-size: 20px; /* Smaller button text on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+form {
+    max-width: 1024px;
+}
+}
+
+/* Contact Section Styling */
+.contact {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 0; /* Remove padding to allow the image to touch the sides */
+    background-image:  url('../assets/fbackground.jpg');
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; /* Scale the image to cover the entire section */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width of the viewport */
+    height: auto; /* Set a fixed height for the contact section */
+    overflow: hidden;
+}
+
+/* Style for the heading */
+.contact h2 {
+    font-family: 'Pacifico', cursive; /* Set font to Alumni Sans SK */
+    font-size: 2.5rem; /* Match the font size */
+    font-weight: 1000; /* Match the font weight */
+    color: #fff; /* Set text color to white for contrast */
+    text-align: center; /* Center the text */
+    margin-top: 15px; /* Add margin for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better visibility */
+}
+
+/* Style for the Telegram button */
+.contact a {
+    display: inline-block; /* Make it an inline-block for padding */
+    background-color: #303555; /* UK button background color */
+    color: white; /* Button text color */
+    border: 1px solid transparent; /* Border styling */
+    border-radius: 500px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size for the button */
+    text-decoration: none; /* Remove underline from links */
+    text-align: center; /* Center text inside the button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for hover effects */
+    margin: 10px 0; /* Space above the button */
+}
+
+/* Hover state for the button */
+.contact a:hover {
+    background-color: #d35448; /* Darker shade for hover */
+    transform: scale(1.05); /* Scale for animation */
+}
+
+/* Active state for the button */
+.contact a:active {
+    background-color: #4a110c; /* Slightly darker color on press */
+    transform: translateY(2px); /* Scale down on press */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements */
+}
+
+.contact input,
+.contact textarea {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Maximum width */
+    padding: 10px; /* Padding for input fields */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.contact button {
+    background-color: #388A48; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.contact button:hover {
+    background-color: #2e6b3c; /* Darker shade on hover */
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(rgba(173, 204, 188, 0.5), rgba(173, 204, 188, 0.5)), url('../assets/fbackground.jpg');
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding for spacing */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width of the viewport */
+    height: auto;
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    color: #fff; /* Footer text color */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px; /* Adjust padding for mobile */
+    }
+    
+    .contact {
+        height: auto; /* Adjust height for mobile */
+        margin-top: 0; /* Reset margin for mobile */
+        padding: 0; /* Remove padding for mobile */
+    }
+
+    .contact a {
+        font-size: 14px; /* Adjust font size for mobile */
+        margin: 10px;
+    }
+
+    .contact h2 {
+        font-size: 2rem; /* Adjust font size for mobile */
+        margin: 10px;
+    }
+}

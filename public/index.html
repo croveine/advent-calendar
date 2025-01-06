@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адвент календар Змійка</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="header-overlay"></div>
+    <div class="hero-content">
+        <h1 class="header-text">
+            <span class="first-half">Календар очікування Нового року -</p></span>
+            <span class="second-half">це завдання від змійки Лізи!</span>
+        </h1>
+    </div>
+        <div class="uk-panel uk-panel-box uk-text-center">
+            <a href="#shop" class="uk-button uk-button-large">Купити зараз</a>
+        </div>
+    </div>
+</header>
+
+ <!-- Cap Section -->
+ <div class="cap">
+    <div class="cap-content">
+        <button class="menu-button" onclick="toggleMenu()">Меню</button> <!-- Mobile Menu Button -->
+        
+        <div class="cap-buttons"> <!-- Desktop Buttons -->
+            <button onclick="scrollToSection('additional-info')">Про календар</button>
+            <a href="#shop" class="buy-button" onclick="scrollToSection('info1')">Купити зараз</a>
+        </div>
+
+        <div class="cap-images">
+            <img src="assets/zmiyka1.png" alt="Змійка" class="cap-image">
+            <img src="assets/name.png" alt="Назва сайту" class="cap-image">
+            <img src="assets/zmiyka2.png" alt="Змійка Назва Сайту" class="cap-image"> <!-- New Image Added -->
+        </div>
+
+        <div class="contact-button-box"> <!-- Desktop Contact Buttons -->
+            <div class="contact-button social-button-a">
+                <a href="https://t.me/snake_Lisa" target="_blank" class="contact-icon">
+                    <img src="assets/telegram.png" alt="Telegram" class="contact-icon-image">
+                </a>
+            </div>
+            <div class="contact-button social-button-b">
+                <a href="viber://chat?number=YourViberNumber" target="_blank" class="contact-icon">
+                    <img src="assets/viber.png" alt="Viber" class="contact-icon-image">
+                </a>
+            </div>
+            <div class="contact-button phone-button">
+                <a href="tel:+380739498515" class="contact-icon">
+                    <img src="assets/phone.png" alt="Phone" class="contact-icon-image">
+                    <span class="contact-text">+38 073 94 98 515</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="dropdownMenu"> <!-- Mobile Dropdown Menu -->
+        <button onclick="scrollToSection('additional-info')">Про календар</button>
+        <a href="#shop" class="buy-button" onclick="scrollToSection('shop')">Купити зараз</a>
+            <button class="contact-button social-button-a">
+                <a href="https://t.me/Snake_Lisa_bot" target="_blank" class="contact-icon">
+                    <img src="assets/telegram.png" alt="Telegram" class="contact-icon-image">
+                    <span class="contact-text">Telegram</span>
+                </a>
+            </button>
+            <button class="contact-button social-button-b">
+                <a href="https://t.me/Snake_Lisa_bot" target="_blank" class="contact-icon">
+                    <img src="assets/viber.png" alt="Viber" class="contact-icon-image">
+                    <span class="contact-text">Viber</span>
+                </a>
+            </button>
+            <button class="contact-button phone-button">
+                <a href="tel:+380739498515" class="contact-icon">
+                    <img src="assets/phone.png" alt="Phone" class="contact-icon-image">
+                    <span class="contact-text">+38 073 94 98 515</span>
+                </a>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Additional Information Section -->
+<section class="additional-info" id="additional-info">
+    <h2 class="additional-info-header">Про календар</h2>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud snake"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+</section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop">
+        <h2 class="shop-header">Купити календар</h2> <!-- Mobile Header -->
+        <div class="products">
+            <div class="product-item">
+                <img src="assets/shop1.jpg" alt="shop1">
+                <button class="buy-now-button" data-product="ПДФ Формат + ТГ-бот" onclick="openModal(this)">Купити</button>
+            </div>
+            <div class="product-item">
+                <img src="assets/shop2.jpg" alt="shop2">
+                <button class="buy-now-button" data-product="Друкований варіант" onclick="openModal(this)">Купити</button>
+            </div>
+        </div>
+    </section>
+
+<!-- Modal Form for Order Confirmation -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal()" aria-label="Close Modal">&times;</button>
+        <h2 class="modal-header">Підтвердити замовлення</h2>
+        <form id="orderForm">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <button type="submit">Підтвердити замовлення</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Зв'язатись з нами</h2>
+        <a href="https://t.me/snake_Lisa" class="uk-button uk-button-large">Написати в Telegram</a>
+    </section>
+
+    <footer>
+        <p>&copy; Це перший сайт змійки Лізи :)</p>
+    </footer>
+
+    <script>
+// Function to scroll to specific sections
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+// Show the cap section when scrolling
+window.onscroll = function() {
+    const capSection = document.querySelector('.cap'); // Get the cap section
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        capSection.style.display = 'none'; // Hide the cap section
+    } else {
+        // Scrolling up
+        capSection.style.display = 'block'; // Show the cap section
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+};
+
+// Function to toggle the mobile menu
+function toggleMenu() {
+    const menuButton = document.querySelector('.menu-button');
+    const mobileMenu = document.getElementById('dropdownMenu');
+    
+    menuButton.classList.toggle('active'); // Toggle active class for styling
+    mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex'; // Toggle menu visibility
+}
+
+// Variable to keep track of the last scroll position
+let lastScrollTop = 0;
+
+// Show the cap section when scrolling
+window.onscroll = function() {
+    const capSection = document.querySelector('.cap'); // Get the cap section
+    const mobileMenu = document.getElementById('dropdownMenu'); // Get the mobile menu
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        capSection.style.display = 'none'; // Hide the cap section
+        if (mobileMenu.style.display === 'flex') {
+            mobileMenu.style.display = 'none'; // Close the mobile menu if it's open
+            document.querySelector('.menu-button').classList.remove('active'); // Remove active class from menu button
+        }
+    } else {
+        // Scrolling up
+        capSection.style.display = 'block'; // Show the cap section
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+};
+    </script>
+<script src="script.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit-icons.min.js"></script>
+</body>
+</html>

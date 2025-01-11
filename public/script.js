@@ -30,7 +30,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
   const phone = document.getElementById('phone').value;
 
   // Send data to the server
-  fetch('api/send-order', {
+  fetch('/api/send-order', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'

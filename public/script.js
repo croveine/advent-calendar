@@ -39,15 +39,20 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
   })
   .then(response => {
       if (response.ok) {
+        fbq('track', 'Lead', { 
+          name: name, 
+          phone: phone, 
+          product: selectedProduct 
+      }); // 📊 Track the form submission event
           closeModal();
-          alert('Congrats! Your order has been placed!'); // Confirmation message
+          alert('Вітаю! Ваше замовлення успішно надіслане!'); // Confirmation message
       } else {
-          alert('There was an error placing your order. Please try again.');
+          alert('Сталась помилка. Спробуйте ще раз.');
       }
   })
   .catch(error => {
       console.error('Error:', error);
-      alert('There was an error placing your order. Please try again.');
+      alert('О ні, схоже щось пішло не так.');
   });
 });
 // Event listener for the "Купити" buttons

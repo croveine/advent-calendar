@@ -64,11 +64,12 @@ header {
 
 /* Hero Content Styles */
 .first-half {
-    font-family: 'Pacifico', cursive;
+    font-family: "Rubik Bubbles", serif;
+    font-weight: 400;
+    font-style: normal;   
     line-height: 1; /* Decrease line height */
     margin-bottom: -50px !important; /* Pull it closer */
     font-size: 3rem; /* Increase font size for better visibility */
-    font-weight: bold; /* Make the font bold */
     color: #ff3737; /* White color for contrast */
     text-shadow: 
     1px 1px 0px black,   /* Right shadow for outline */
@@ -83,19 +84,20 @@ header {
 }
 
 .second-half {
-    font-family: 'Pacifico', cursive;
+    font-family: "Rubik Bubbles", serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1; /* Decrease line height */
     margin-top: -50px !important; /* Pull it closer */
     font-size: 3rem; /* Increase font size for better visibility */
-    font-weight: bold; /* Make the font bold */
     color: #fff; /* White color for contrast */
     text-shadow: 
     1px 1px 0px black,   /* Right shadow for outline */
     -1px -1px 0px black, /* Left shadow for outline */
     1px -1px 0px black,  /* Top right shadow for outline */
     -1px 1px 0px black,  /* Bottom left shadow for outline */
-    0px 0px 1px rgba(255, 255, 255, 0.9), /* Frosty shadow effect */
-    0px 0px 2px rgba(173, 204, 188, 1); /* Frosty shadow effect */
+    0px 0px 1px rgba(255, 255, 255, 0.5), /* Frosty shadow effect */
+    0px 0px 2px rgba(173, 204, 188, 0.7); /* Frosty shadow effect */
     letter-spacing: 5px; /* Increase letter spacing for a more airy feel */
     animation: shimmer 1.5s infinite; /* Add shimmer animation */
     overflow-x: hidden;
@@ -886,14 +888,16 @@ header {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    align-self: center;
+    justify-content: center; /* Add this to center the modal content */
+    align-items: center; /* Add this to center the modal content */
     z-index: 1000; /* Sit on top */
     top: 0;
-    max-width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    left: 12.5%;
+    right: 0;
+    bottom: 0;
+    max-width: 75%; /* Full width */
+    height: auto; /* Full height */
     overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
 }
 
 /* Modal Header Styles */
@@ -914,8 +918,6 @@ header {
     padding: 20px;
     border: 1px solid #888; /* Border color */
     border-radius: 8px; /* Rounded corners */
-    max-width: 75%; /* Could be more or less, depending on screen size */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     overflow: hidden;
 }
 

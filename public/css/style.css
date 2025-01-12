@@ -5,6 +5,10 @@
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+html {
+    max-width: 100%;
+}
+
 img {
     max-width: 100%; /* Responsive images */
     height: auto; /* Maintain aspect ratio */
@@ -13,7 +17,7 @@ img {
 
 /* General Styles */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Pacifico', cursive;
     margin: 0;
     padding: 0;
     height: 100%; /* Ensure the body takes up the full height */
@@ -38,7 +42,7 @@ header {
     background-position: center bottom; /* Center the background image */
     background-repeat: no-repeat; /* Ensure no tiling */
     background-size: cover; 
-    width: 100%; 
+    max-width: 100%; 
     height: 100vh; 
     text-align: center;
     display: flex;
@@ -60,8 +64,9 @@ header {
 
 /* Hero Content Styles */
 .first-half {
+    font-family: 'Pacifico', cursive;
     line-height: 1; /* Decrease line height */
-    margin-bottom: -50px !important; /* Pull it closer */    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-bottom: -50px !important; /* Pull it closer */
     font-size: 3rem; /* Increase font size for better visibility */
     font-weight: bold; /* Make the font bold */
     color: #ff3737; /* White color for contrast */
@@ -78,8 +83,9 @@ header {
 }
 
 .second-half {
+    font-family: 'Pacifico', cursive;
     line-height: 1; /* Decrease line height */
-    margin-top: -50px !important; /* Pull it closer */    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-top: -50px !important; /* Pull it closer */
     font-size: 3rem; /* Increase font size for better visibility */
     font-weight: bold; /* Make the font bold */
     color: #fff; /* White color for contrast */
@@ -263,7 +269,7 @@ header {
     font-size: 18px; /* Font size */
     cursor: pointer;
     transition: all 0.3s ease; /* Transition for hover effects */
-    font-family: 'Snowburst', cursive;
+    font-family: 'Pacifico', cursive;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     margin: 0 10px; /* Add horizontal margin to create spacing */
     text-decoration: none; /* Remove underline from links */
@@ -272,7 +278,8 @@ header {
 /* Specific style for the buy button to ensure no underline */
 .cap-buttons .buy-button {
     text-decoration: none; /* Remove underline */
-    font-family: 'Snowburst', cursive;}
+    font-family: 'Pacifico', cursive;
+}
 
 /* Hover state */
 .cap-buttons button:hover,
@@ -299,7 +306,7 @@ header {
 }
 
 .contact-button {
-    font-family: 'Snowburst', cursive;
+    font-family: 'Pacifico', cursive;
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center content inside the link */
@@ -344,6 +351,7 @@ header {
 }
 
 .phone-button {
+    font-family: 'Pacifico', cursive;
     margin: 0 10px; /* Space between buttons */
     padding: 10px 20px; /* Increased padding for better touch targets */
     background-color: #BED04A; /* Green background to match cap buttons */
@@ -430,7 +438,7 @@ header {
 
 /* Mobile Menu Button */
 .menu-button {
-    font-family: 'Snowburst', cursive;
+    font-family: 'Pacifico', cursive;
     display: none; /* Hide by default */
     background-color: #BED04A; /* Background color for menu button */
     color: white; /* Text color */
@@ -451,7 +459,7 @@ header {
 .mobile-menu button, 
 .mobile-menu .buy-button, 
 .mobile-menu .contact-button { 
-    font-family: 'Snowburst', cursive;
+    font-family: 'Pacifico', cursive;
     display: block; /* Ensure all buttons are displayed in the mobile menu */ 
     width: 100%; /* Full width for buttons */ 
     margin: 5px 0; /* Space between buttons */ 
@@ -566,6 +574,7 @@ header {
     .mobile-menu button, 
     .mobile-menu .buy-button, 
     .mobile-menu .contact-button { 
+        font-family: 'Pacifico', cursive;
         display: block; /* Ensure all buttons are displayed in the mobile menu */ 
         width: 45%; /* Full width for buttons */ 
         margin: 5px; /* Space between buttons */ 
@@ -603,9 +612,9 @@ header {
         margin: 0;
         flex-grow: none;
         left: 0; /* Position from the left */
-    display: flex; /* Use flexbox for images */
-    align-items: flex-start; /* Center images vertically */
-    justify-content: flex-start; /* Center images within this container */
+        display: flex; /* Use flexbox for images */
+        align-items: flex-start; /* Center images vertically */
+        justify-content: flex-start; /* Center images within this container */
     }
     
     .contact-text {
@@ -643,13 +652,13 @@ header {
 }
 
 .additional-info-header {
+    font-family: 'Pacifico', cursive;
     position: absolute;
     flex-wrap: nowrap;
     top: 0; /* Adjust this value to position it at the top */
     left: 47.5%; /* Center it horizontally */
     transform: translateX(-50%); /* Center the text */
     z-index: 100;
-    font-family: 'Pacifico', cursive; /* Set font to Alumni Sans SK */
     font-size: 2.9rem; /* Adjust font size as needed */
     font-weight: 1000;
     letter-spacing: 5px;
@@ -730,9 +739,9 @@ header {
         align-items: center; /* Center clouds horizontally */
         position: relative; /* Ensure relative positioning for stacking */
         padding: 10px; /* Adjust padding for smaller screens */overflow-x: hidden;
-}
-
-.additional-info-header {
+    }
+    
+    .additional-info-header {
     position: absolute;
     flex-wrap: nowrap;
     top: 0; /* Adjust this value to position it at the top */
@@ -745,8 +754,8 @@ header {
     margin: 0; /* Remove default margin to position at the top */
     padding-top: 20px; /* Add some padding at the top for spacing */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better visibility */
-
-}
+    }
+    
     .cloud {
         position: relative; /* Change to relative positioning for stacking */
         align-items: center;
@@ -785,12 +794,12 @@ header {
 
     .cloud3 {
         bottom: 5px;
-        left: 45px;
+        left: 50px;
     }
 
     .cloud4 {
         margin-top: 50px;
-        left: 45px;
+        left: 55px;
     }
 }
 
@@ -810,6 +819,7 @@ header {
 
 /* Shop Section Header */
 .shop-header {
+    font-family: 'Pacifico', cursive;
     display: none; /* Hide by default */
     color: #fff; /* Text color */
     text-align: center; /* Center the text */
